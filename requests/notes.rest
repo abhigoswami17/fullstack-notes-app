@@ -1,23 +1,25 @@
 GET http://localhost:3001/api/notes
 
 ###
-GET http://localhost:3001/api/notes/1
+GET http://localhost:3001/api/notes/657d85e99a48e8118fe88116
 
 ###
 POST http://localhost:3001/api/notes
 Content-Type: application/json
 
 {
-
+  "content": "The `punycode` module is deprecated.",
+  "important": false
 }
 
 ###
-PUT http://localhost:3001/api/notes/1
+PUT http://localhost:3001/api/notes/657d85e99a48e8118fe88116
 Content-Type: application/json
 
 {
-
+  "content": "The `punycode` module is deprecated.",
+  "important": true
 }
 
 ###
-DELETE http://localhost:3001/api/notes/1
+DELETE http://localhost:3001/api/notes/657caccc672182a3cb5e7bfb
