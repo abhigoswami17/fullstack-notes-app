@@ -1,14 +1,14 @@
-import express from 'express';
-import cors from 'cors';
-import mongoose from 'mongoose';
-import notesRouter from './controllers/notes.js';
-import config from './utils/config.js';
-import { info, errorLog } from './utils/logger.js';
-import {
+const express = require('express');
+const cors = require('cors');
+const mongoose = require('mongoose');
+const notesRouter = require('./controllers/notes');
+const config = require('./utils/config');
+const { info, errorLog } = require('./utils/logger');
+const {
 	requestLogger,
 	unknownEndpoint,
 	errorHandler,
-} from './utils/middleware.js';
+} = require('./utils/middleware');
 
 const app = express();
 
@@ -39,4 +39,4 @@ app.use(unknownEndpoint);
 
 app.use(errorHandler);
 
-export default app;
+module.exports = app;

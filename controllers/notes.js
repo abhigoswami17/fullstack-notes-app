@@ -1,5 +1,5 @@
-import express from 'express';
-import Note from '../models/note.js';
+const express = require('express');
+const Note = require('../models/note');
 
 const notesRouter = express.Router();
 
@@ -66,4 +66,4 @@ notesRouter.delete('/:id', (request, response, next) => {
 		});
 });
 
-export default notesRouter;
+module.exports = notesRouter;

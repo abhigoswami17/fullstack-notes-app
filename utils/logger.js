@@ -1,7 +1,9 @@
-export const info = (...params) => {
+const info = (...params) => {
 	console.log(...params);
 };
 
-export const errorLog = (...params) => {
+const errorLog = (...params) => {
 	console.error(...params);
 };
+
+module.exports = { info, errorLog };
